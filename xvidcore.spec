@@ -2,7 +2,7 @@
 %define soname  4
  
 Name:           xvidcore
-Version:        1.3.4
+Version:        1.3.5
 Release:        2%{?dist}
 Summary:        MPEG-4 Simple and Advanced Simple Profile codec
 
@@ -91,6 +91,9 @@ popd #libdir
 
 
 %changelog
+
+* Tue Dec 19 2017 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-2
+- Updated to 1.3.5
 
 * Fri Jul 08 2016 David Vásquez <davidjeremias82 AT gmail DOT com> - 1.3.4-2
 - Massive rebuild
