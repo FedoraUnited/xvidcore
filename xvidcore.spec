@@ -3,7 +3,7 @@
  
 Name:           xvidcore
 Version:        1.3.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        MPEG-4 Simple and Advanced Simple Profile codec
 
 Group:          System Environment/Libraries
@@ -91,6 +91,9 @@ popd #libdir
 
 
 %changelog
+
+* Sun Mar 04 2018 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-3
+- Rebuilt
 
 * Tue Dec 19 2017 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-2
 - Updated to 1.3.5
