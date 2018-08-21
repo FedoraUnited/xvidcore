@@ -17,6 +17,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 %ifarch %{ix86} x86_64
 BuildRequires:  nasm >= 2.0
 %endif
+BuildRequires:  gcc-c++
 
 Provides:       xvid = %{version}
 Obsoletes:      xvid < %{version}
