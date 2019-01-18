@@ -3,7 +3,7 @@
  
 Name:           xvidcore
 Version:        1.3.5
-Release:        3%{?dist}
+Release:        7%{?dist}
 Summary:        MPEG-4 Simple and Advanced Simple Profile codec
 
 Group:          System Environment/Libraries
@@ -11,8 +11,7 @@ License:        GPLv2+
 URL:            http://www.xvid.org/
 Source:		http://downloads.xvid.org/downloads/xvidcore-%{version}.tar.bz2
 Source1:        baselibs.conf
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
+Patch:		xvidcore-check_cpu_features-crash.patch
 
 %ifarch %{ix86} x86_64
 BuildRequires:  nasm >= 2.0
@@ -42,7 +41,7 @@ documentation for the Xvid video codec.
 
 
 %prep
-%setup -q -n %{name}
+%autosetup -n %{name} -p1
 sed -i '1i%%ifidn __OUTPUT_FORMAT__,elf\nSECTION .note.GNU-stack noalloc progbits noexec nowrite\n%%endif' src/*/*_asm/*.asm
 
 %build
@@ -92,6 +91,9 @@ popd #libdir
 
 
 %changelog
+
+* Wed Jan 16 2019 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-7
+- Rebuilt
 
 * Sun Mar 04 2018 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-3
 - Rebuilt
