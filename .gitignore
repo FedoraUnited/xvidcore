@@ -3,4 +3,6 @@ BUILDROOT/*
 RPMS/*
 SPECS/*
 SRPMS/*
-xvidcore*.tar.bz2
+*.tar.bz2
+*.rpm
+.directory

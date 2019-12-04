@@ -2,16 +2,15 @@
 %define soname  4
  
 Name:           xvidcore
-Version:        1.3.5
+Version:        1.3.6
 Release:        7%{?dist}
 Summary:        MPEG-4 Simple and Advanced Simple Profile codec
 
 Group:          System Environment/Libraries
 License:        GPLv2+
 URL:            http://www.xvid.org/
-Source:		http://downloads.xvid.org/downloads/xvidcore-%{version}.tar.bz2
+Source:	https://downloads.xvid.com/downloads/xvidcore-%{version}.tar.gz
 Source1:        baselibs.conf
-Patch:		xvidcore-check_cpu_features-crash.patch
 
 %ifarch %{ix86} x86_64
 BuildRequires:  nasm >= 2.0
@@ -91,6 +90,9 @@ popd #libdir
 
 
 %changelog
+
+* Wed Dec 04 2019 David Vásquez <davidva AT tutanota DOT com> - 1.3.6-7
+- Updated to 1.3.6
 
 * Wed Jan 16 2019 David Vásquez <davidva AT tutanota DOT com> - 1.3.5-7
 - Rebuilt
